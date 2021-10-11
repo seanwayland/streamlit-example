@@ -39,15 +39,16 @@ with st.echo(code_location='below'):
         .mark_circle(color='#0068c9', opacity=0.5)
         .encode(x='x:Q', y='y:Q'))
     st.title('My first app')
+    st.title('Another title app')
 
     df = pd.DataFrame({
-        'first column': [1, 2, 3, 4],
+        'first column': [3, 2, 4, 4],
         'second column': [10, 20, 30, 40]
     })
 
     df
 
-    if st.checkbox('Show dataframe'):
+    if st.checkbox('Show the dataframe'):
         chart_data = pd.DataFrame(
             np.random.randn(20, 3),
             columns=['a', 'b', 'c'])
